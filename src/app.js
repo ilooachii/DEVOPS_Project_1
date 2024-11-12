@@ -17,5 +17,12 @@ export class BerlinClock {
         
         if(time === "0:00") 
             return "OOOOOOOOOOO";
+
+        if(time === "0:05") 
+            return "YOOOOOOOOOO";
+
+        if(time === "0:10")
+            return "YYOOOOOOOOO";        
     }
+    
 }

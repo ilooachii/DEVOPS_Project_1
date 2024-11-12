@@ -58,12 +58,28 @@ describe("minute line", function () {
 });
 
 // TEST FIVE MINUTES BLOCK à partir de 6
-describe("Five minutes block", function () {
+describe("Five minutes block", function () {    
     it("should return 'OOOOOOOOOOO' when the time is 0:00", function () {
 
       const time = "0:00";
       const result = new BerlinClock().fiveMinutesBlock(time);
   
       expect(result).toBe("OOOOOOOOOOO");
+    });
+
+    it("should return 'YOOOOOOOOOO' when the time is 0:05", function () {
+
+      const time = "0:05";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YOOOOOOOOOO");
+    });
+
+    it("should return 'YYOOOOOOOOO' when the time is 0:10", function () {
+
+      const time = "0:10";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYOOOOOOOOO");
     });
 });
