@@ -13,4 +13,9 @@ export class BerlinClock {
         }
     }
     
+    fiveMinutesBlock(time) {
+        
+        if(time === "0:00") 
+            return "OOOOOOOOOOO";
+    }
 }
