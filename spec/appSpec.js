@@ -37,7 +37,14 @@ describe("minute line", function () {
         expect(result).toBe("trois lampes jaune allumée");
     });
     
-    
+    it("should return 'quatre lampes jaune allumée' when the time is 0:04", function () {
+       
+        const time = "0:04";
+
+        const result = new BerlinClock().oneMinuteLine(time);
+
+        expect(result).toBe("quatre lampes jaune allumée");
+    });
 
 
 });

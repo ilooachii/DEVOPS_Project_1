@@ -8,7 +8,9 @@ export class BerlinClock {
 
       if(time === "0:02")  return "deux lampes jaune allumée";
 
-      if (time == "0:03") return "trois lampes jaune allumée";
+      if (time === "0:03") return "trois lampes jaune allumée";
+
+      if (time === "0:04") return "quatre lampes jaune allumée"
     }
     
 }
