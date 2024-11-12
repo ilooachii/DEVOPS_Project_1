@@ -82,4 +82,29 @@ describe("Five minutes block", function () {
   
       expect(result).toBe("YYOOOOOOOOO");
     });
+
+    it("should return 'YYROOOOOOOO' when the time is 0:15", function () {
+
+      const time = "0:15";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYROOOOOOOO");
+    });
+
+    it("should return 'YYRYYR00000' when the time is 0:30", function () {
+
+      const time = "0:30";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYRYYR00000");
+    });
+
+    it("should return 'YYRYYRYYRYY' when the time is 0:55", function () {
+
+      const time = "0:55";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYRYYRYYRYY");
+    });
+    // FINI LES TEST A 12
 });

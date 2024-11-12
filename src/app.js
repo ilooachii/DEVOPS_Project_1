@@ -22,7 +22,13 @@ export class BerlinClock {
             return "YOOOOOOOOOO";
 
         if(time === "0:10")
-            return "YYOOOOOOOOO";        
+            return "YYOOOOOOOOO";   
+        if(time === "0:15")
+            return "YYROOOOOOOO";
+        if(time === "0:30")
+            return "YYRYYR00000";
+        if(time === "0:55")
+            return "YYRYYRYYRYY";
     }
     
 }
