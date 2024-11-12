@@ -28,8 +28,16 @@ describe("minute line", function () {
         expect(result).toBe("deux lampes jaune allumée");
     });
 
+    it("should return 'trois lampes jaune allumée' when the time is 0:03", function () {
+       
+        const time = "0:03";
 
+        const result = new BerlinClock().oneMinuteLine(time);
 
+        expect(result).toBe("trois lampes jaune allumée");
+    });
     
+    
+
 
 });
