@@ -2,15 +2,15 @@ export class BerlinClock {
 
     oneMinuteLine(time) {
 
-      if(time === "0:00") return "aucune lampe allumée";
+        const minutes = parseInt(time.split(":")[1], 10); 
+        const lampsToLight = minutes % 5;
 
-      if (time === "0:01") return "1ère lampe jaune allumée";
-
-      if(time === "0:02")  return "deux lampes jaune allumée";
-
-      if (time === "0:03") return "trois lampes jaune allumée";
-
-      if (time === "0:04") return "quatre lampes jaune allumée"
+        if (lampsToLight === 0) {
+            return "0 lampe allumée";
+        } else {
+            const lampesText = lampsToLight === 1 ? "1 lampe jaune allumée" : `${lampsToLight} lampes jaune allumée`;
+            return lampesText;
+        }
     }
     
 }
