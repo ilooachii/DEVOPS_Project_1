@@ -91,12 +91,12 @@ describe("Five minutes block", function () {
       expect(result).toBe("YYROOOOOOOO");
     });
 
-    it("should return 'YYRYYR00000' when the time is 0:30", function () {
+    it("should return 'YYRYYROOOOO' when the time is 0:30", function () {
 
       const time = "0:30";
       const result = new BerlinClock().fiveMinutesBlock(time);
   
-      expect(result).toBe("YYRYYR00000");
+      expect(result).toBe("YYRYYROOOOO");
     });
 
     it("should return 'YYRYYRYYRYY' when the time is 0:55", function () {

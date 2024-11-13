@@ -14,21 +14,20 @@ export class BerlinClock {
     }
     
     fiveMinutesBlock(time) {
-        
-        if(time === "0:00") 
-            return "OOOOOOOOOOO";
+        const minutes = parseInt(time.split(":")[1], 10);// exemple 0:05 => 5 minutes , 0:15 => 15 minutes
 
-        if(time === "0:05") 
-            return "YOOOOOOOOOO";
-
-        if(time === "0:10")
-            return "YYOOOOOOOOO";   
-        if(time === "0:15")
-            return "YYROOOOOOOO";
-        if(time === "0:30")
-            return "YYRYYR00000";
-        if(time === "0:55")
-            return "YYRYYRYYRYY";
-    }
+        let line = '';
+        const LampsOn = Math.floor(minutes / 5);
     
+        for (let i = 1; i <= 11; i++) {
+            if (i <= LampsOn) {
+                line += (i % 3 === 0) ? 'R' : 'Y';
+            } else {
+                line += 'O';
+            }
+        }
+
+        return line;
+    }
+        
 }
