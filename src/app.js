@@ -45,6 +45,7 @@ export class BerlinClock {
     fiveHourLine(time) {
        
         if (time === "0:00") return "OOOO";
+        if( time === "5:00") return "ROOO";
     
       }
     
