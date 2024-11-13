@@ -133,4 +133,12 @@ describe("One hour line", function () {
 
     expect(result).toBe("RROO");
   });
+
+  it("should display 'RRRO' when the time is 3:00", function () {
+
+    const time = "3:00";
+    const result = new BerlinClock().oneHourLine(time);
+
+    expect(result).toBe("RRRO");
+  });
 });
