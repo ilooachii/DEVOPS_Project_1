@@ -141,4 +141,12 @@ describe("One hour line", function () {
 
     expect(result).toBe("RRRO");
   });
+
+  it("should display 'RRRR' when the time is 4:00", function () {
+
+    const time = "4:00";
+    const result = new BerlinClock().oneHourLine(time);
+
+    expect(result).toBe("RRRR");
+  });
 });
