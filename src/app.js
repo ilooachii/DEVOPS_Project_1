@@ -44,11 +44,11 @@ export class BerlinClock {
 
     fiveHourLine(time) {
        
-        if (time === "0:00") return "OOOO";
-        if( time === "5:00") return "ROOO";
-        if( time === "10:00") return "RROO";
-        if( time === "15:00") return "RRRO";
-        if( time === "20:00") return "RRRR";
+    const hours = parseInt(time.split(":")[0], 10); // Extraire les heures de l'entrée "hh:mm"
+    const numberOfLamps = Math.floor(hours / 5); // Calculer combien de blocs de 5 heures
+
+    return "R".repeat(numberOfLamps) + "O".repeat(4 - numberOfLamps); // Remplir avec "R" et "O"
+       
       }
     
 }
