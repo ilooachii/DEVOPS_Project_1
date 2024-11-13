@@ -212,9 +212,14 @@ it("should return 'RROO' when given 14:00", function () {
 });
 
 describe("Seconds lamp", function () {
-  it("should return 'Y' when the seconds are even", function () {
+  it("should return 'R' when the seconds are even", function () {
       const time = "0:00:30";
       const result = new BerlinClock().secondsLamp(time);
-      expect(result).toBe("Y");
+      expect(result).toBe("R");
   });
+  it("should return 'O' when the seconds are odd", function () {
+    const time = "0:00:31";
+    const result = new BerlinClock().secondsLamp(time);
+    expect(result).toBe("O");
+});
 });
