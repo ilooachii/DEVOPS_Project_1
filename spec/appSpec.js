@@ -55,8 +55,56 @@ describe("minute line", function () {
 
         expect(result).toBe("0 lampe allumée");
     });
+});
 
+// TEST FIVE MINUTES BLOCK à partir de 6
+describe("Five minutes block", function () {    
+    it("should return 'OOOOOOOOOOO' when the time is 0:00", function () {
 
+      const time = "0:00";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("OOOOOOOOOOO");
+    });
 
+    it("should return 'YOOOOOOOOOO' when the time is 0:05", function () {
 
+      const time = "0:05";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YOOOOOOOOOO");
+    });
+
+    it("should return 'YYOOOOOOOOO' when the time is 0:10", function () {
+
+      const time = "0:10";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYOOOOOOOOO");
+    });
+
+    it("should return 'YYROOOOOOOO' when the time is 0:15", function () {
+
+      const time = "0:15";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYROOOOOOOO");
+    });
+
+    it("should return 'YYRYYROOOOO' when the time is 0:30", function () {
+
+      const time = "0:30";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYRYYROOOOO");
+    });
+
+    it("should return 'YYRYYRYYRYY' when the time is 0:55", function () {
+
+      const time = "0:55";
+      const result = new BerlinClock().fiveMinutesBlock(time);
+  
+      expect(result).toBe("YYRYYRYYRYY");
+    });
+    // FINI LES TEST A 12
 });

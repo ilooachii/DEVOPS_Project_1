@@ -13,4 +13,22 @@ export class BerlinClock {
         }
     }
     
+    fiveMinutesBlock(time) {
+        // re commit pour etre sur d'avoir fait le refactor 
+        const minutes = parseInt(time.split(":")[1], 10);// exemple 0:05 => 5 minutes , 0:15 => 15 minutes
+
+        let line = '';
+        const LampsOn = Math.floor(minutes / 5);
+    
+        for (let i = 1; i <= 11; i++) {
+            if (i <= LampsOn) {
+                line += (i % 3 === 0) ? 'R' : 'Y';
+            } else {
+                line += 'O';
+            }
+        }
+
+        return line;
+    }
+
 }
