@@ -234,4 +234,16 @@ describe("Berlin Clock", function () {
         expect(result).toBe("R\nROOO\nOOOO\nYOOOOOOOOOO\nYOOO");
     });
 
+    describe("Berlin Clock", function () {
+
+        it("BerlinClock should return O:RRRR:ROOO:YYRYYRYYROO:OOOO when given 21:45:37", function() {
+    
+            const time = "21:45:37";
+            const result = new BerlinClock().entireClock(time);
+    
+            expect(result).toBe("O\nRRRR\nROOO\nYYRYYRYYROO\nOOOO");
+        });
+    
+    });
+
 });
