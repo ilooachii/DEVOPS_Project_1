@@ -48,7 +48,7 @@ export class BerlinClock {
     const numberOfLamps = Math.floor(hours / 5); // Calculer combien de blocs de 5 heures
 
     return "R".repeat(numberOfLamps) + "O".repeat(4 - numberOfLamps); // Remplir avec "R" et "O"
-       
-      }
+     
+    }
     
 }
