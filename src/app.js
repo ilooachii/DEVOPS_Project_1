@@ -6,9 +6,9 @@ export class BerlinClock {
         const lampsToLight = minutes % 5;
 
         if (lampsToLight === 0) {
-            return "0 lampe allumée";
+            return "OOOO";
         } else {
-            const lampesText = lampsToLight === 1 ? "1 lampe jaune allumée" : `${lampsToLight} lampes jaune allumée`;
+            const lampesText = lampsToLight === 1 ? "YOOO" : "Y".repeat(lampsToLight) + "O".repeat(4 - lampsToLight);
             return lampesText;
         }
     }

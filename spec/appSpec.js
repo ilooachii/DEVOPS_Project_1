@@ -3,57 +3,57 @@ import { BerlinClock } from "../src/app.js";
 describe("minute line", function () {
 
     
-    it("should return '0 lampe allumée' when the time is 0:00", function () {
+    it("should return 'OOOO' when the time is 0:00", function () {
         const time = "0:00";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("0 lampe allumée");
+        expect(result).toBe("OOOO");
     });
 
-    it("should return '1 lampe jaune allumée' when the time is 0:01 ", function () {
+    it("should return 'YOOO' when the time is 0:01 ", function () {
         
         const time = "0:01";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("1 lampe jaune allumée");
+        expect(result).toBe("YOOO");
     });
 
-    it("should return '2 lampes jaune allumée' when the time is 0:02", function () {
+    it("should return 'YYOO' when the time is 0:02", function () {
        
         const time = "0:02";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("2 lampes jaune allumée");
+        expect(result).toBe("YYOO");
     });
 
-    it("should return '3 lampes jaune allumée' when the time is 0:03", function () {
+    it("should return 'YYYO' when the time is 0:03", function () {
        
         const time = "0:03";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("3 lampes jaune allumée");
+        expect(result).toBe("YYYO");
     });
     
-    it("should return '4 lampes jaune allumée' when the time is 0:04", function () {
+    it("should return 'YYYY' when the time is 0:04", function () {
        
         const time = "0:04";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("4 lampes jaune allumée");
+        expect(result).toBe("YYYY");
     });
 
     
-    it("should return '0 lampe allumé' when given 0:05 ", function () {
+    it("should return 'OOOO' when given 0:05 ", function () {
         const time = "0:05";
 
         const result = new BerlinClock().oneMinuteLine(time);
 
-        expect(result).toBe("0 lampe allumée");
+        expect(result).toBe("OOOO");
     });
 });
 
