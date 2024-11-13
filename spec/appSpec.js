@@ -202,5 +202,15 @@ it("should return 'OOOO' when given 1:00", function () {
   expect(result).toBe("OOOO");
 });
 
+it("should return 'RROO' when given 14:00", function () {
+  const time = "14:00";
+
+  const result = clock.fiveHourLine(time);
+
+  expect(result).toBe("RROO");
+});
+
+
+
 
 });
