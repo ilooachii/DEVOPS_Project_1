@@ -32,13 +32,14 @@ export class BerlinClock {
     }
 
     oneHourLine(time) {
-        const hours = parseInt(time.split(":")[0]) % 5;
+        const hours = parseInt(time.split(":")[0], 10) % 5; // Exemple : 12:00 => 12 % 5 = 2 (2 lampes rouges allumées)
     
-        if (hours === 0) return "OOOO";
-        if (hours === 1) return "ROOO";
-        if (hours === 2) return "RROO";
-        if (hours === 3) return "RRRO";
-        if (hours === 4) return "RRRR";
+        let line = '';
+        for (let i = 1; i <= 4; i++) {
+            line += (i <= hours) ? 'R' : 'O';
+        }
+    
+        return line;
     }
     
 }
