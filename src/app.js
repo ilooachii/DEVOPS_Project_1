@@ -56,4 +56,12 @@ export class BerlinClock {
         return seconds % 2 === 0 ? "R" : "O"; // "R" pour rouge (allumé), "O" pour éteint
     }
     
+    entireClock(time){ 
+        const second = this.secondsLamp(time);
+        const fiveHours = this.fiveHourLine(time);
+        const simpleHour = this.oneHourLine(time);
+        const fiveMinutes = this.fiveMinutesBlock(time);
+        const simpleMinutes = this.oneMinuteLine(time);
+        return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
+    }
 }

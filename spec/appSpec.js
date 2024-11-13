@@ -223,3 +223,15 @@ describe("Seconds lamp", function () {
     expect(result).toBe("O");
 });
 });
+
+describe("Berlin Clock", function () {
+
+    it("BerlinClock should return R:ROOO:OOOO:YOOOOOOOOOO:YOOO when given 05:06:00", function() {
+
+        const time = "05:06:00";
+        const result = new BerlinClock().entireClock(time);
+
+        expect(result).toBe("R\nROOO\nOOOO\nYOOOOOOOOOO\nYOOO");
+    });
+
+});
