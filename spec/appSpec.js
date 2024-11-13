@@ -179,5 +179,14 @@ it(" should return 'RROO' when given 10:00", function () {
   expect(result).toBe("RROO");
 });
 
+it("should return 'RRRO' lamps when given 15:00", function () {
+  const time = "15:00";
+
+  const result = clock.fiveHourLine(time);
+
+  expect(result).toBe("RRRO");
+});
+
+
 
 });
