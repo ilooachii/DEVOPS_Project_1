@@ -150,3 +150,16 @@ describe("One hour line", function () {
     expect(result).toBe("RRRR");
   });
 });
+
+describe("Five hours block", function () {
+  const clock = new BerlinClock();
+
+  it("should return 'OOOO' when given 0:00", function () {
+      const time = "0:00";
+
+      const result = clock.fiveHourLine(time);
+
+      expect(result).toBe("OOOO");
+
+  });
+});
