@@ -186,6 +186,13 @@ it("should return 'RRRO' lamps when given 15:00", function () {
 
   expect(result).toBe("RRRO");
 });
+it(" should return 'RRRR' when given 20:00", function () {
+  const time = "20:00";
+
+  const result = clock.fiveHourLine(time);
+
+  expect(result).toBe("RRRR");
+});
 
 
 
