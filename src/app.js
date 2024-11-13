@@ -31,4 +31,10 @@ export class BerlinClock {
         return line;
     }
 
+    oneHourLine(time) {
+        const hours = parseInt(time.split(":")[0]) % 5;
+    
+        if (hours === 0) return "OOOO";
+    }
+    
 }

@@ -108,3 +108,13 @@ describe("Five minutes block", function () {
     });
     // FINI LES TEST A 12
 });
+
+describe("One hour line", function () {    
+  it("should display 'OOOO' when the time is 0:00", function () {
+
+      const time = "0:00";
+      const result = new BerlinClock().oneHourLine(time);
+
+      expect(result).toBe("OOOO");
+  });
+});
