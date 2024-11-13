@@ -53,9 +53,7 @@ export class BerlinClock {
 
     secondsLamp(time) {
         const seconds = parseInt(time.split(":")[2], 10);
-    
-        if (seconds % 2 === 0) return "R"; // Rouge pour allumé
-        if (seconds % 2 !== 0) return "O"; // Off pour éteint
+        return seconds % 2 === 0 ? "R" : "O"; // "R" pour rouge (allumé), "O" pour éteint
     }
     
 }
