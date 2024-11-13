@@ -171,4 +171,13 @@ describe("Five hours block", function () {
     expect(result).toBe("ROOO");
 });
 
+it(" should return 'RROO' when given 10:00", function () {
+  const time = "10:00";
+
+  const result = clock.fiveHourLine(time);
+
+  expect(result).toBe("RROO");
+});
+
+
 });
