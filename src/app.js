@@ -50,5 +50,11 @@ export class BerlinClock {
     return "R".repeat(numberOfLamps) + "O".repeat(4 - numberOfLamps); // Remplir avec "R" et "O"
      
     }
+
+    secondsLamp(time) {
+        const seconds = parseInt(time.split(":")[2], 10);
+    
+        if (seconds % 2 === 0) return "R"; // Jaune pour allumé
+    }
     
 }

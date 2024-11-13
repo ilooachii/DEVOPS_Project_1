@@ -209,8 +209,12 @@ it("should return 'RROO' when given 14:00", function () {
 
   expect(result).toBe("RROO");
 });
+});
 
-
-
-
+describe("Seconds lamp", function () {
+  it("should return 'Y' when the seconds are even", function () {
+      const time = "0:00:30";
+      const result = new BerlinClock().secondsLamp(time);
+      expect(result).toBe("Y");
+  });
 });
