@@ -11,7 +11,8 @@ h1 {
   font-size: 40px;
 }
 
-#timeInput,#button_ClockButton {
+#timeInput,
+#button_ClockButton {
   font-size: 20px;
 }
 
