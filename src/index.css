@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 70px;
+  margin-bottom: 165px;
+  font-size: 40px;
+}
+
+#timeInput,#button_ClockButton {
+  font-size: 20px;
+}
+
+#berlinClockDisplay {
+  text-align: center;
+  font-size: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}

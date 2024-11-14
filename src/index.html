@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projet Devops BerlinClock Kata -> affichage</title>
         <script type="module" src="app.js"></script>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1> Projet BerlinClock </h1>
+        <h1> Projet n°1 Berlin Clock Kata</h1>
         <input type="time" id="timeInput" step="1">
+        <br>
         <button id="button_ClockButton">Afficher l'horloge</button>
         <pre id="berlinClockDisplay"></pre>
 
@@ -25,9 +27,17 @@
                 const berlinClock = new BerlinClock();
 
                 const result = berlinClock.entireClock(`${timeInput}:00`);
-                
+
                 document.getElementById('berlinClockDisplay').textContent = result;
             });
         </script>
+        <footer>
+            <p class="groupe">
+                Groupe 50 : <br><br>
+                - Dahaj Belghazouani Ilyas <br>
+                - Naai Wassim <br>
+                - Elberaichi Zakaria
+            </p>
+        </footer>
     </body>
 </html>
