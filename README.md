@@ -35,7 +35,9 @@ L'objectif est de transformer une heure numérique classique en un affichage au 
   Exécutez la commande suivante pour vérifier l’installation :
   ```bash
   npm -v
+  
 - **Extension Live Server**
   Installez l’extension Live Server dans votre éditeur de code (par exemple, VS Code) pour l’affichage correct de l’horloge dans votre navigateur.
+  
   **Vérification :**
   Assurez-vous que l’extension est activée et utilisez l’option “Open with Live Server” pour lancer le projet.
